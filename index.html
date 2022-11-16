@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Weather Lookup</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="app.js">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="input-section">
+        <div class="container">
+          <h1 class="heading">Swift Weather Lookup</h1>
+          <form>
+            <select class="units" name="units" id="units" required>
+              <option value="metric"selected>Metric</option>
+              <option value="imperial" >Imperial</option>
+            </select>
+            <input type="text" placeholder="Search a city name" autofocus>
+            <button type="submit">Submit</button>
+            <span class="errmsg"></span>
+          </form>
+        </div>
+    </section>
+
+    <section class="output-section">
+      <div class="container">
+        <ul class="cities"></ul>
+      </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span>Created by:  <a href="https://github.com/Christian-Banaag"><i class="fa-brands fa-github"></i> Christian Banaag</a></span>
+        </div>
+      </footer>
+</body>
+<script src="https://kit.fontawesome.com/6ea6d9fae8.js" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</html>

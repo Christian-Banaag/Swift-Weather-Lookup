@@ -1,0 +1,234 @@
+:root {
+    --bg_dark: #4e4e4e;
+    --bg_light: #979797;
+    --text_light: #fff;
+    --text_med: #536f7c;
+    --text_dark: #1e1f32ec;
+    --orange: #ff8c00;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+   
+  button,
+  input {
+    border: none;
+    background: none;
+    outline: none;
+    color: inherit;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  ul {
+    list-style: none;
+  }
+
+  /* Input section */
+  body {
+    font: 1rem/1.3 "Roboto", sans-serif;
+    background: var(--bg_dark);
+    color: var(--text_dark);
+    padding: 70px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .input-section {
+    color: var(--text_light);
+    text-align: center;
+  }
+  
+  .heading {
+    font-weight: bold;
+    font-size: 3.5rem;
+    padding-bottom: 50px;
+  }
+  
+  .input-section form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .input-section form select {
+    font-size: 1rem;
+    margin: 20px 20px 20px 0px;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(141, 141, 141);
+  }
+  
+  .input-section form input {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    border-bottom: 3px solid;
+  }
+  
+  .input-section form button {
+    font-size: 1rem;
+    padding: 15px 25px;
+    margin-left: 25px;
+    border-radius: 12px;
+    background: green;
+  }
+  
+  .input-section form button:hover {
+    background: darkgreen;
+  }
+  
+  .input-section form .errmsg {
+    position: absolute;
+    justify-content: center;
+    bottom: -50px;
+    margin: 10px 0px;
+    color: lightcoral;
+  }
+  
+  
+  /* Output section*/
+  .output-section {
+    margin: 70px 0 30px;
+  }
+  
+  .output-section .cities {
+    display: grid;
+    grid-gap: 20px 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .output-section .city {
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: var(--bg_light);
+    color: var(--text_light);
+  }
+  
+  .output-section figcaption {
+    margin-top: 10px;
+    text-transform: capitalize;
+  }
+  
+  .output-section .city-temp {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text_light);
+  }
+  
+  .output-section .city sup {
+    font-size: 0.5em;
+  }
+  
+  .output-section .city-name sup {
+    padding: 0.4em 0.4em;
+    border-radius: 10px;
+    color: var(--text_light);
+    background: var(--orange);
+  }
+  
+  .output-section .city-icon {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  footer {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text_light);
+    margin-top: auto;
+    height: 25px;
+  }
+
+  footer a {
+    color: rgb(218, 209, 136);
+    font-size: 1.2em;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+  footer a:hover{
+    color: rgb(37, 206, 37);
+}
+
+/* Media queries */
+  @media screen and (max-width: 1200px) {
+    body {
+      padding: 30px;
+    }
+    
+    .output-section .cities {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .heading,
+    .output-section .city-temp {
+      font-size: 3rem;
+    }
+    
+    .output-section {
+      margin-top: 20px;
+    }
+    
+    .input-section form {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .input-section form input,
+    .input-section form button {
+      width: 100%;
+    }
+  
+    .input-section form button {
+      margin: 20px 0 0 0;
+    }
+    
+    .input-section form .errmsg {
+      position: static;
+      max-width: none;
+      min-height: 0;
+      margin-top: 10px;
+    }
+  
+    .output-section .cities {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    body {
+      padding: 15px;
+    }
+    
+    .output-section .cities {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
